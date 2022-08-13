@@ -16,10 +16,6 @@ GMaps.prototype.createControl = function(options) {
   if (options.id) {
     control.id = options.id;
   }
-  
-  if (options.title) {
-    control.title = options.title;
-  }
 
   if (options.classes) {
     control.className = options.classes;

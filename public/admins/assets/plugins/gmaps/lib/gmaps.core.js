@@ -150,10 +150,6 @@ var GMaps = (function(global) {
     options.zoom = options.zoom || 15;
     options.mapType = options.mapType || 'roadmap';
 
-    var valueOrDefault = function(value, defaultValue) {
-      return value === undefined ? defaultValue : value;
-    };
-
     var self = this,
         i,
         events_that_hide_context_menu = [
@@ -167,18 +163,18 @@ var GMaps = (function(global) {
         markerClustererFunction = options.markerClusterer,
         mapType = google.maps.MapTypeId[options.mapType.toUpperCase()],
         map_center = new google.maps.LatLng(options.lat, options.lng),
-        zoomControl = valueOrDefault(options.zoomControl, true),
+        zoomControl = options.zoomControl || true,
         zoomControlOpt = options.zoomControlOpt || {
           style: 'DEFAULT',
           position: 'TOP_LEFT'
         },
         zoomControlStyle = zoomControlOpt.style || 'DEFAULT',
         zoomControlPosition = zoomControlOpt.position || 'TOP_LEFT',
-        panControl = valueOrDefault(options.panControl, true),
-        mapTypeControl = valueOrDefault(options.mapTypeControl, true),
-        scaleControl = valueOrDefault(options.scaleControl, true),
-        streetViewControl = valueOrDefault(options.streetViewControl, true),
-        overviewMapControl = valueOrDefault(overviewMapControl, true),
+        panControl = options.panControl || true,
+        mapTypeControl = options.mapTypeControl || true,
+        scaleControl = options.scaleControl || true,
+        streetViewControl = options.streetViewControl || true,
+        overviewMapControl = overviewMapControl || true,
         map_options = {},
         map_base_options = {
           zoom: this.zoom,
@@ -274,7 +270,7 @@ var GMaps = (function(global) {
       if (!getElementById('gmaps_context_menu')) return;
 
       var context_menu_element = getElementById('gmaps_context_menu');
-
+      
       context_menu_element.innerHTML = html;
 
       var context_menu_items = context_menu_element.getElementsByTagName('a'),
@@ -302,7 +298,7 @@ var GMaps = (function(global) {
       context_menu_element.style.left = left + "px";
       context_menu_element.style.top = top + "px";
 
-      // context_menu_element.style.display = 'block';
+      context_menu_element.style.display = 'block';
     };
 
     this.buildContextMenu = function(control, e) {
@@ -311,11 +307,11 @@ var GMaps = (function(global) {
 
         var overlay = new google.maps.OverlayView();
         overlay.setMap(self.map);
-
+        
         overlay.draw = function() {
           var projection = overlay.getProjection(),
               position = e.marker.getPosition();
-
+          
           e.pixel = projection.fromLatLngToContainerPixel(position);
 
           buildContextMenuHTML(control, e);
@@ -324,12 +320,6 @@ var GMaps = (function(global) {
       else {
         buildContextMenuHTML(control, e);
       }
-
-      var context_menu_element = getElementById('gmaps_context_menu');
-
-      setTimeout(function() {
-        context_menu_element.style.display = 'block';
-      }, 0);
     };
 
     this.setContextMenu = function(options) {
@@ -358,11 +348,9 @@ var GMaps = (function(global) {
       ul.style.padding = '8px';
       ul.style.boxShadow = '2px 2px 6px #ccc';
 
-      if (!getElementById('gmaps_context_menu')) {
-        doc.body.appendChild(ul);
-      }
+      doc.body.appendChild(ul);
 
-      var context_menu_element = getElementById('gmaps_context_menu');
+      var context_menu_element = getElementById('gmaps_context_menu')
 
       google.maps.event.addDomListener(context_menu_element, 'mouseout', function(ev) {
         if (!ev.relatedTarget || !this.contains(ev.relatedTarget)) {

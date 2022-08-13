@@ -1,19 +1,17 @@
 
-    <script src="{{asset('admins/assets/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('admins/assets/js/modernizr.min.js')}}"></script>
-    <script src="{{asset('admins/assets/js/detect.js')}}"></script>
-    <script src="{{asset('admins/assets/js/fastclick.js')}}"></script>
-    <script src="{{asset('admins/assets/js/jquery.slimscroll.js')}}"></script>
-    <script src="{{asset('admins/assets/js/jquery.blockUI.js')}}"></script>
-    <script src="{{asset('admins/assets/js/waves.js')}}"></script>
-    <script src="{{asset('admins/assets/js/jquery.nicescroll.js')}}"></script>
-    <script src="{{asset('admins/assets/js/jquery.scrollTo.min.js')}}"></script>
-    <script src="{{asset('admins/assets/plugins/RWD-Table-Patterns/dist/js/rwd-table.min.js')}}"></script>
+  <script src="{{asset('admins/assets/plugins/jquery/jquery.min.js')}}"></script>
+  <!-- Bootstrap tether Core JavaScript -->
+  <script src="{{asset('admins/assets/plugins/bootstrap/js/popper.min.js')}}"></script>
+  <script src="{{asset('admins/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+  <!-- slimscrollbar scrollbar JavaScript -->
+  <script src="{{asset('admins/assets/js/jquery.slimscroll.js')}}"></script>
+  <!--Wave Effects -->
+  <script src="{{asset('admins/assets/js/waves.js')}}"></script>
+  <!--Menu sidebar -->
+  <script src="{{asset('admins/assets/js/sidebarmenu.js')}}"></script>
+  <!--stickey kit -->
+  <script src="{{asset('admins/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')}}"></script>
+  <script src="{{asset('admins/assets/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
 
-    <script src="{{asset('admins/assets/plugins/morris/morris.min.js')}}"></script>
-    <script src="{{asset('admins/assets/plugins/raphael/raphael.min.js')}}"></script>
-
-    <script src="{{asset('admins/assets/pages/dashboard.int.js')}}"></script>
-
-
-    <script src="{{asset('admins/assets/js/app.js')}}"></script>
+  <script src="{{asset('admins/assets/js/custom.min.js')}}"></script>
+  <script src="{{asset('admins/assets/plugins/styleswitcher/jQuery.style.switcher.js')}}"></script>

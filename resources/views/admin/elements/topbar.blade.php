@@ -1,54 +1,48 @@
-<div class="topbar">
-
-    <div class="topbar-left	d-none d-lg-block">
-        <div class="text-center">
-            <a href="index.html" class="logo"><img src="{{asset('admins/assets/images/logo.png')}}" height="22"
-                    alt="logo"></a>
+<header class="topbar">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <b>
+                    <img src="{{asset('admins/assets/images/logo-icon.png')}}" alt="homepage" class="dark-logo" />
+                    <img src="{{asset('admins/assets/images/logo-light-icon.png')}}" alt="homepage" class="light-logo" />
+                </b><span>
+                 <img src="{{asset('admins/assets/images/logo-text.png')}}" alt="homepage" class="dark-logo" />
+                 <img src="{{asset('admins/assets/images/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span> </a>
         </div>
-    </div>
-    <nav class="navbar-custom">
-        <!-- Search input -->
-        <div class="search-wrap" id="search-wrap">
-            <div class="search-bar">
-                <input class="search-input" type="search" placeholder="Tìm kiếm..." />
-                <a href="#" class="close-search toggle-search" data-target="#search-wrap">
-                    <i class="mdi mdi-close-circle"></i>
-                </a>
-            </div>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-md-0">
+                <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+            </ul>
+            <ul class="navbar-nav my-lg-0">
+                <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                    <form class="app-search">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                </li>
+                {{-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flag-icon flag-icon-us"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right scale-up"> <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-in"></i> India</a> <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a> <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> China</a> <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-de"></i> Dutch</a> </div>
+                </li> --}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('admins/assets/images/users/1.jpg')}}" alt="user" class="profile-pic" /></a>
+                    <div class="dropdown-menu dropdown-menu-right scale-up">
+                        <ul class="dropdown-user">
+                            <li>
+                                <div class="dw-user-box">
+                                    <div class="u-img"><img src="{{asset('admins/assets/images/users/1.jpg')}}" alt="user"></div>
+                                    <div class="u-text">
+                                        <h4>Admin</h4>
+                                        <p class="text-muted">admin@gmail.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">Xem thông tin</a></div>
+                                </div>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><i class="fa fa-navicon"></i> Menu code</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><i class="fa fa-power-off"></i> Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <ul class="list-inline float-right mb-0">
-            <li class="list-inline-item dropdown notification-list">
-                <a class="nav-link waves-effect toggle-search" href="#"
-                    data-target="#search-wrap">
-                    <i class="mdi mdi-magnify noti-icon"></i>
-                </a>
-            </li>
-            <li class="list-inline-item dropdown notification-list nav-user">
-                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown"
-                    href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                    <img src="{{asset('admins/assets/images/users/avatar-6.jpg')}}" alt="user"
-                        class="rounded-circle">
-                    <span class="d-none d-md-inline-block ml-1">Phước<i
-                            class="mdi mdi-chevron-down"></i> </span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown">
-                    <a class="dropdown-item" href="{{ route('menucode') }}">
-                        <span class="badge badge-success float-right m-t-5">5</span>
-                        <i class="dripicons-gear text-muted"></i> Menu-code</a>
-                    <a class="dropdown-item" href="#"><i class="dripicons-user text-muted"></i>
-                        Đổi mật khẩu</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"><i class="dripicons-exit text-muted"></i>
-                        Đăng xuất</a>
-                </div>
-            </li>
-        </ul>
-        <ul class="list-inline menu-left mb-0">
-            <li class="list-inline-item">
-                <button type="button" class="button-menu-mobile open-left waves-effect">
-                    <i class="mdi mdi-menu"></i>
-                </button>
-            </li>
-        </ul>
     </nav>
-</div>
+</header>

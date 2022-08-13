@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    {{-- link header --}}
+    {{-- Header --}}
     @include('admin.elements.header')
 </head>
-<body class="fixed-left">
-    {{-- Loader --}}
-    @include('admin.elements.loader')
-    <div id="wrapper">
-        @include('admin.elements.sidebar')
-        <div class="content-page">
-            <!-- Start content -->
-            <div class="content">
-                @include('admin.elements.topbar')
-                <div class="page-content-wrapper ">
-                    @section('wrapper')
 
-                    @show
-                </div>
-            </div>
+<body class="fix-header card-no-border">
+    @include('admin.elements.loader')
+    <div id="main-wrapper">
+        @include('admin.elements.topbar')
+        @include('admin.elements.sidebar')
+        <div class="page-wrapper">
+            @section('wrapper')
+            @show
             @include('admin.elements.footer')
         </div>
     </div>
-    {{-- script --}}
     @include('admin.elements.script')
 </body>
+
 </html>

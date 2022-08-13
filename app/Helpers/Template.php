@@ -5,24 +5,20 @@ class Template {
     public static function HeaderTitleContent($title,$link)
     {
         $html = sprintf('
-        <div class="page-title-box">
-        <div class="row align-items-center">
-            <div class="col-md-8">
-                <h4 class="page-title m-0">%s</h4>
-            </div>
-            <div class="col-md-4">
-                <div class="float-right d-none d-md-block">
-                    <div class="dropdown">
-                        <a class="btn btn-primary" href="%s" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="ion ion-md-add mr-1"></i> Thêm
-                        </a>
-                    </div>
+        <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-themecolor">Fix-header</h3>
                 </div>
-            </div>
-            <!-- end col -->
+                <div class="col-md-7 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active">Fix-header</li>
+                    </ol>
+                </div>
+                <div>
+                    <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+                </div>
         </div>
-        <!-- end row -->
-    </div>
         ',$title,$link);
         return $html;
     }
