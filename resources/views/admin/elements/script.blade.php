@@ -1,4 +1,4 @@
-    <script src="{{asset('admins/assets/js/jquery.min.js')}}"></script>
+
     <script src="{{asset('admins/assets/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('admins/assets/js/modernizr.min.js')}}"></script>
     <script src="{{asset('admins/assets/js/detect.js')}}"></script>

@@ -12,3 +12,4 @@
 <link href="{{asset('admins/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('admins/assets/css/icons.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('admins/assets/css/style.css')}}" rel="stylesheet" type="text/css">
+<script src="{{asset('admins/assets/js/jquery.min.js')}}"></script>
