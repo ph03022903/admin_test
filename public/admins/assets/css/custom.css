@@ -39,3 +39,7 @@
     background-color: #3B9AE1;
 }
 /* sub */
+.disable-button{
+    pointer-events: none;
+    opacity: 0.2;
+}

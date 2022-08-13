@@ -30,7 +30,7 @@
                                         <tr>
                                             <td>{{$value['id']}}</td>
                                             <td>
-                                                <div class="switch">
+                                                <div class="switch {{$value['default']==1 ? 'disable-button' : ''}}">
                                                     <label>
                                                         <input type="checkbox" {{$value['display']==1 ? 'checked' : '';}}><span class="lever switch-col-teal"></span>
                                                     </label>
