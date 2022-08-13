@@ -1,29 +1,16 @@
+@php
+    use App\Helpers\Template as Template;
+@endphp
 @extends('admin.layout')
-
 @section('wrapper')
 <link href="{{asset('admins/assets/plugins/RWD-Table-Patterns/dist/css/rwd-table.min.css')}}" rel="stylesheet" type="text/css" media="screen">
 <div class="container-fluid">
-
+    @php
+         $Header = Template::HeaderTitleContent('Trang menu code',route('menucode'));
+    @endphp
     <div class="row">
         <div class="col-sm-12">
-            <div class="page-title-box">
-                <div class="row align-items-center">
-                    <div class="col-md-8">
-                        <h4 class="page-title m-0">Trang menu code</h4>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="float-right d-none d-md-block">
-                            <div class="dropdown">
-                                <button class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="ion ion-md-add mr-1"></i> Thêm
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
+            {!!$Header!!}
             <!-- end page-title-box -->
         </div>
     </div>
