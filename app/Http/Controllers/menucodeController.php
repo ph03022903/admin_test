@@ -8,11 +8,9 @@ class menucodeController extends Controller
 {
     public function index()
     {
-       $MenuCodeTb = menu_code_model::all();
+        $MenuCodeTb = menu_code_model::where('parent', '=', 0)->get();
     //    echo '<pre style="color:#f00;font-weight:bold;">'; print_r($MenuCodeTb); echo '</pre>';
-       return view('admin.pages.menucode.index');
+       return view('admin.pages.menucode.index',['list_menu'=>$MenuCodeTb]);
     }
-
-    // Slider
 
 }
