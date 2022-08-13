@@ -32,7 +32,7 @@
                             class="mdi mdi-chevron-down"></i> </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown">
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="{{ route('menucode') }}">
                         <span class="badge badge-success float-right m-t-5">5</span>
                         <i class="dripicons-gear text-muted"></i> Menu-code</a>
                     <a class="dropdown-item" href="#"><i class="dripicons-user text-muted"></i>
@@ -42,37 +42,13 @@
                         Đăng xuất</a>
                 </div>
             </li>
-
         </ul>
-
         <ul class="list-inline menu-left mb-0">
             <li class="list-inline-item">
                 <button type="button" class="button-menu-mobile open-left waves-effect">
                     <i class="mdi mdi-menu"></i>
                 </button>
             </li>
-            <li class="list-inline-item dropdown notification-list d-none d-sm-inline-block">
-                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown"
-                    href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                    Create New <i class="mdi mdi-plus"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-animated">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
-                </div>
-            </li>
-            <li class="list-inline-item notification-list d-none d-sm-inline-block">
-                <a href="#" class="nav-link waves-effect">
-                    Activity
-                </a>
-            </li>
-
         </ul>
-
-
     </nav>
-
 </div>

@@ -18,7 +18,15 @@ Route::prefix($prefixAdmin)->group(function () {
     $nameController = 'dashboard';
     $controller = $nameController.'Controller@';
     Route::get('/',[
-        'as'=> $nameController,
+        'as'=> 'admin',
         'uses'=>$controller.'index'
     ]);
+    $nameController = 'menucode';
+    Route::prefix($nameController)->group(function () use ($nameController) {
+        $controller = $nameController.'Controller@';
+        Route::get('/',[
+            'as'=> $nameController,
+            'uses'=>$controller.'index'
+        ]);
+    });
 });
