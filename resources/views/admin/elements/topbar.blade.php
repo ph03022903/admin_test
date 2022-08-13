@@ -36,7 +36,7 @@
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="fa fa-navicon"></i> Menu code</a></li>
+                            <li><a href="{{ route('menucode') }}"><i class="fa fa-navicon"></i> Menu code</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#"><i class="fa fa-power-off"></i> Đăng xuất</a></li>
                         </ul>
