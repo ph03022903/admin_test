@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class menu_code_model extends Model
 {
 
-    use HasFactory;
-    const CREATED_AT = 'creation_date';
-    const UPDATED_AT = 'updated_date';
+    protected $table='menu_code_tb';
+    protected $fillable = [
+        'id_user', 'id_doitac', 'price_billdoitac','catalog_doitac'
+    ];
+    public $timestamps=false;
 }
