@@ -15,12 +15,12 @@
                         <h4 class="card-title">Danh sách</h4>
                         <h6 class="card-subtitle">Danh sách ẩn/hiện menu admin</h6>
                         <div class="table-responsive">
-                            <table class="table table-bordered text-center">
+                            <table class="table table-bordered text-center table-menu-code">
                                 <thead>
                                     <tr>
                                         <th style="width:5%">ID</th>
-                                        <th style="width:15%">Trạng thái</th>
-                                        <th style="width:60%">Tên menu</th>
+                                        <th style="width:10%">Trạng thái</th>
+                                        <th style="width:65%;">Tên menu</th>
                                         <th style="width:10%">Sắp sếp</th>
                                         <th class="text-nowrap" style="width:10%">Hoạt động</th>
                                     </tr>
@@ -36,12 +36,32 @@
                                                     </label>
                                                 </div>
                                             </td>
-                                            <td>{{$value['name']}}</td>
+                                            <td class="text-left font-medium"><a href="javascript:;">{{$value['name']}}</a></td>
                                             <td><input class="form-control" type="text" value="" id="example-text-input"></td>
                                             <td class="text-nowrap text-center">
                                                 <button type="button" class="btn waves-effect waves-light btn-sm btn-danger">Xóa</button>
                                             </td>
                                         </tr>
+                                        @if ($value['child'])
+                                            @foreach ( $value['child'] as $value2)
+                                                <tr class="menu_sub">
+                                                    <td>{{$value2['id']}}</td>
+                                                    <td>
+                                                        <div class="switch">
+                                                            <label>
+                                                                <input type="checkbox" {{$value2['display']==1 ? 'checked' : '';}}><span class="lever switch-col-teal"></span>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-left p-l-20"><a href="{{$value2['link']}}">- {{$value2['name']}}</a></td>
+                                                    <td><input class="form-control" type="text" value="" id="example-text-input"></td>
+                                                    <td class="text-nowrap text-center">
+                                                        <button type="button" class="btn waves-effect waves-light btn-sm btn-danger">Xóa</button>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+
+                                        @endif
                                     @endforeach
                                 </tbody>
                             </table>

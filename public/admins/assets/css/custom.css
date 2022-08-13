@@ -1,0 +1,41 @@
+.table-menu-code a{
+    color: #3120E0;
+}
+
+.switch label input[type=checkbox]:checked+.lever.switch-col-teal {
+    background-color: hsla(245, 76%, 50%, 0.5);
+}
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #3120E0;
+}
+.switch label input[type=checkbox]:checked+.lever.switch-col-teal:after {
+    background-color: #3120E0;
+}
+/* sub */
+.table-menu-code .menu_sub{
+    font-size: 15px;
+}
+.table-menu-code .menu_sub a{
+    color: #3B9AE1;
+}
+.table-menu-code .menu_sub .switch label .lever {
+    width: 25px;
+    height: 10px;
+}
+.table-menu-code .menu_sub .switch label .lever:after {
+    width: 16px;
+    height: 16px;
+}
+.table-menu-code .menu_sub .switch label input[type=checkbox]:checked+.lever:after{
+    left: 15px;
+}
+.table-menu-code .menu_sub .switch label input[type=checkbox]:checked+.lever.switch-col-teal {
+    background-color: hsla(206, 73%, 56%, 0.5);
+}
+.table-menu-code .menu_sub .switch label input[type=checkbox]:checked+.lever {
+    background-color: #3B9AE1;
+}
+.table-menu-code .menu_sub .switch label input[type=checkbox]:checked+.lever.switch-col-teal:after {
+    background-color: #3B9AE1;
+}
+/* sub */
