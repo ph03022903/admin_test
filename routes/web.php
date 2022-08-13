@@ -29,4 +29,17 @@ Route::prefix($prefixAdmin)->group(function () {
             'uses'=>$controller.'index'
         ]);
     });
+
+    $nameController = 'productcat';
+    Route::prefix($nameController)->group(function () use ($nameController) {
+        $controller = $nameController.'Controller@';
+        Route::get('/',[
+            'as'=> $nameController,
+            'uses'=>$controller.'index'
+        ]);
+        Route::get('/form',[
+            'as'=> $nameController.'/form',
+            'uses'=>$controller.'form'
+        ]);
+    });
 });

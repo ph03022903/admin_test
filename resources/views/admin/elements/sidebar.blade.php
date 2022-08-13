@@ -35,6 +35,24 @@
                         <li><a href="pages-500.html">Error 500</a></li>
                     </ul>
                 </li>
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="ion ion-md-cube"></i><span>
+                        Product </span> <span class="menu-arrow float-right"><i
+                                class="mdi mdi-chevron-right"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ route('productcat') }}"><i class=""></i>Category Product</a></li>
+                        <li><a href="pages-login.html">List Product</a></li>
+                    </ul>
+                </li>
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-copy"></i><span>
+                        News </span> <span class="menu-arrow float-right"><i
+                                class="mdi mdi-chevron-right"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="pages-blank.html">Category News</a></li>
+                        <li><a href="pages-login.html">List News</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <div class="clearfix"></div>
