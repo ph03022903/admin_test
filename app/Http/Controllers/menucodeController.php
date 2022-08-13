@@ -9,7 +9,7 @@ class menucodeController extends Controller
     public function index()
     {
        $MenuCodeTb = menu_code_model::all();
-    //    echo '<pre style="color:#f00;font-weight:bold;">'; print($MenuCodeTb); echo '</pre>';
+    //    echo '<pre style="color:#f00;font-weight:bold;">'; print_r($MenuCodeTb); echo '</pre>';
        return view('admin.pages.menucode.index');
     }
 
