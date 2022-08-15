@@ -41,6 +41,27 @@ Route::prefix($prefixAdmin)->group(function () {
             'as'=> $nameController.'/form',
             'uses'=>$controller.'form'
         ]);
+        Route::get('/config',[
+            'as'=> $nameController.'/config',
+            'uses'=>$controller.'config'
+        ]);
+        Route::post('/saveConfig',[
+            'as'=> $nameController.'/saveConfig',
+            'uses'=>$controller.'saveConfig'
+        ]);
+    });
+
+    $nameController = 'product';
+    Route::prefix($nameController)->group(function () use ($nameController) {
+        $controller = $nameController.'Controller@';
+        Route::get('/',[
+            'as'=> $nameController,
+            'uses'=>$controller.'index'
+        ]);
+        Route::get('/form',[
+            'as'=> $nameController.'/form',
+            'uses'=>$controller.'form'
+        ]);
     });
 });
 // Route::post('chagemenucode', 'ajaxController@changeDisplayMenuCode');

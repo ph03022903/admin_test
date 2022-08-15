@@ -3,10 +3,10 @@ use App\Helpers\Template as Template;
 @endphp
 @extends('admin.layout')
 @section('wrapper')
-    @php
-    $Header = Template::HeaderTitleContent('Trang menu code', route('admin'));
-    @endphp
-    {!! $Header !!}
+@php
+        $Header = Template::HeaderTitleContent('Trang menu code', route('admin'),false);
+@endphp
+    {!!$Header!!}
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
