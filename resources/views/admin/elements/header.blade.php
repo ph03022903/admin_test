@@ -14,3 +14,4 @@
     <!-- You can change the theme colors from here -->
     <link href="{{asset('admins/assets/css/colors/blue.css')}}" id="theme" rel="stylesheet">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">

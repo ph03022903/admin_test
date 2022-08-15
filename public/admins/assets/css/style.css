@@ -10,6 +10,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 @import url(../css/spinners.css);
 @import url(../css/animate.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
 .preloader {
     width: 100%;
     height: 100%;
@@ -31,7 +32,7 @@
 
 body {
     background: #fff;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     overflow-x: hidden;
     color: #67757c;

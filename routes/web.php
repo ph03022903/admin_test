@@ -43,3 +43,4 @@ Route::prefix($prefixAdmin)->group(function () {
         ]);
     });
 });
+// Route::post('chagemenucode', 'ajaxController@changeDisplayMenuCode');
