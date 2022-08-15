@@ -1,5 +1,4 @@
 
-  <script src="{{asset('admins/assets/plugins/jquery/jquery.min.js')}}"></script>
   <!-- Bootstrap tether Core JavaScript -->
   <script src="{{asset('admins/assets/plugins/bootstrap/js/popper.min.js')}}"></script>
   <script src="{{asset('admins/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
@@ -15,3 +14,5 @@
 
   <script src="{{asset('admins/assets/js/custom.min.js')}}"></script>
   <script src="{{asset('admins/assets/plugins/styleswitcher/jQuery.style.switcher.js')}}"></script>
+
+  <script src="{{asset('admins/assets/plugins/tinymce/tinymce.min.js')}}"></script>

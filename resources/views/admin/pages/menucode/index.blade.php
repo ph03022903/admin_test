@@ -4,7 +4,7 @@
 @extends('admin.layout')
 @section('wrapper')
 @php
-        $Header = Template::HeaderTitleContent('Trang menu code', route('admin'));
+        $Header = Template::HeaderTitleContent('Trang menu code', route('admin'),false);
 @endphp
     {!!$Header!!}
     <div class="container-fluid">

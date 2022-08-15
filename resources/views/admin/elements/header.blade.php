@@ -12,4 +12,7 @@
     <link href="{{asset('admins/assets/css/style.css')}}" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="{{asset('admins/assets/css/colors/blue.css')}}" id="theme" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('admins/assets/plugins/html5-editor/bootstrap-wysihtml5.css')}}" />
 
+
+    <script src="{{asset('admins/assets/plugins/jquery/jquery.min.js')}}"></script>
